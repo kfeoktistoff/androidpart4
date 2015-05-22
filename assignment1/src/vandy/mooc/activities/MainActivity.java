@@ -50,7 +50,6 @@ public class MainActivity extends LifecycleLoggingActivity
 
         // Set the default layout.
         setContentView(R.layout.main_activity);
-        ((EditText)findViewById(R.id.url)).setText(getString(R.string.default_photo));
 
         // Handle any configuration change.
         handleConfigurationChanges();
