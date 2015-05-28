@@ -60,20 +60,16 @@ class RequestHandler extends Handler {
                 RequestMessage.makeRequestMessage(message);
 
         // Get the reply Messenger.
-        // TODO -- you fill in here.
         final Messenger messenger = requestMessage.getMessenger();
 
         // Get the URL associated with the message data.
-        // TODO -- you fill in here.
         final Uri imageUrl = requestMessage.getImageURL();
 
         // Get the directory pathname where the image will be stored.
-        // TODO -- you fill in here.
         final String directoryPath = requestMessage.getDirectoryPathname();
 
         // Get the requestCode for the operation that was invoked by
         // the Activity.
-        // TODO -- you fill in here.
         final int requestCode = requestMessage.getRequestCode();
 
         // A Runnable that downloads the image, stores it in a file,
@@ -86,19 +82,16 @@ class RequestHandler extends Handler {
                     @Override
                     public void run() {
                         // Download and store the requested image.
-                        // TODO -- you fill in here.
                         Uri imagePath = Utils.downloadImage(mService.get().getApplicationContext(), imageUrl, directoryPath);
                         // Send the path to the image file, url, and
                         // requestCode back to the Activity via the
                         // replyMessenger.
-                        // TODO -- you fill in here.
                         sendPath(messenger, imagePath, imageUrl, requestCode);
                     }
                 };
 
         // Execute the downloadImageAndReply Runnable to download the
         // image and reply.
-        // TODO -- you fill in here.
         mExecutorService.execute(downloadImageAndReply);
     }
 
@@ -112,7 +105,6 @@ class RequestHandler extends Handler {
                          int requestCode) {
         // Call the makeReplyMessage() factory method to create
         // Message.
-        // TODO -- you fill in here.
         ReplyMessage replyMessage = ReplyMessage.makeReplyMessage(pathToImageFile, url, requestCode);
 
         try {
@@ -122,7 +114,6 @@ class RequestHandler extends Handler {
                             + " back to the MainActivity");
 
             // Send the replyMessage back to the Activity.
-            // TODO -- you fill in here.
             messenger.send(replyMessage.getMessage());
         } catch (Exception e) {
             Log.e(getClass().getName(),
@@ -136,7 +127,6 @@ class RequestHandler extends Handler {
      */
     public void shutdown() {
         // Immediately shutdown the ExecutorService.
-        // TODO -- you fill in here.
         mExecutorService.shutdown();
     }
 }
