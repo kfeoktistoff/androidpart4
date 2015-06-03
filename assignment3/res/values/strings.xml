@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">assignment3</string>
+    <string name="load_sync">Load sync</string>
+    <string name="load_async">Load async</string>
+    <string name="default_city">Moscow,RU</string>
+    <string name="lab_sunset">Sunset</string>
+    <string name="lab_sunrise">Sunrise</string>
+    <string name="lab_humidity">Humidity</string>
+    <string name="lab_temp">Temp</string>
+    <string name="lab_degree">Degree</string>
+    <string name="lab_speed">Speed</string>
+    <string name="lab_name">Location</string>
+</resources>
