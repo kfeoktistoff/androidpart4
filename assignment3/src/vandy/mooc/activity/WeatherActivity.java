@@ -167,6 +167,7 @@ public class WeatherActivity extends Activity {
     }
 
     private void resetUI() {
+	mResultName.setText(null);
         mResultSpeed.setText(null);
         mResultDeg.setText(null);
         mResultTemp.setText(null);
